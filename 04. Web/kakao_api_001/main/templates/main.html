@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>KakaoMap API Example</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+</head>
+<body>
+    <div id="placesList"></div>
+    <script>
+        $(document).ready(function(){
+            var apiUrl = "https://dapi.kakao.com/v2/local/search/keyword.json";
+            var keyword = "국수 서울"; // "국수"와 "서울"을 포함하여 검색
+            var apikey = "0277875339c4f7d58fe3b2efc52c6617";
+            var query = apiUrl + "?query=" + keyword + "&size=100";
+
+            $.ajax({
+                type: "GET",
+                url: query,
+                headers: {
+                    "Authorization": "KakaoAK " + apikey
+                },
+                success: function(response) {
+                    if (response.documents.length > 0) {
+                        var placesList = $("#placesList");
+                        placesList.append("<h2>서울시 국수 음식점 목록</h2>");
+                        var ul = $("<ul></ul>");
+                        for (var i = 0; i < response.documents.length; i++) {
+                            var place = response.documents[i];
+                            ul.append("<li>" + place.place_name + "</li>");
+                        }
+                        placesList.append(ul);
+                    } else {
+                        $("#placesList").html("검색 결과가 없습니다.");
+                    }
+                },
+                error: function(xhr, status, error) {
+                    console.log(error);
+                }
+            });
+        });
+    </script>
+</body>
+</html>

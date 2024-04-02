@@ -1,0 +1,37 @@
+<html>
+    <head>
+        <title>Photo App</title>
+    </head>
+
+    <body>
+        <h1><a href="">사진 목록 페이지</a></h1>
+
+        <h3><a href="{% url 'photo_post' %}">사진 등록</a></h3>
+        <section>
+ <!-- For문으로 작성 -->
+            {% for photo in photos %}
+             <div>
+                <h2>
+                    <a href="{% url 'photo_detail' pk=photo.pk %}">{{ photo.title }}</a>
+                </h2>
+                <img src="{{ photo.image }}" alt="{{ photo.title }}" width="300" />
+                <p>{{ photo.author }}, {{ photo.price }}</p>
+            </div>
+            {% endfor %}
+<!--             <div>
+                <h2>
+                    <a href="">모나리자</a>
+                </h2>
+                <img src="https://wallpapercave.com/wp/wp2758201.jpg" alt="모나리자" width="300" />
+                <p>레오나르도 다빈치, 1000원</p>
+            </div>
+            <div>
+                <h2>
+                    <a href="">최후의 만찬</a>
+                </h2>
+                <img src="https://wallpapercave.com/dwp1x/FUA1WNB.jpg" alt="최후의 만찬" width="300" />
+                <p>레오나르도 다빈치, 1500원</p>
+            </div> -->
+        </section>
+    </body>
+</html>

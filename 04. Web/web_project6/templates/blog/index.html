@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="/bootstrap/css/bootstrap.min.css" rel="stylesheet" type="text/css">
+    <title>Blog</title>
+</head>
+<body>
+    <nav>
+        <h1>Blog</h1>
+    </nav>
+    <div class="card mb-4">
+        {% for post in posts %}
+            <hr />
+            <a href="{% url 'blog:post_detail' post_id=post.id %}"><h2>{{ post.title }}</h2></a>
+            <h4>{{ post.created_at }}</h4>
+            <p>{{ post.content }}</p>
+        {% endfor %}
+    </div>
+</body>
+</html>

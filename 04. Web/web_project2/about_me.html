@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Me</title>
+
+    <link href="./bootstrap/css/bootstrap.min.css" rel="stylesheet" type="text/css">
+    <script type="text/javascript" src="what_time_is_it.js"></script>
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg bg-body-tertiary">
+        <div class="container">
+<!--                 <div class="container-fluid">
+-->                <a class="navbar-brand" href="./index.html">Django</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNavDropdown">
+                <ul class="navbar-nav me-auto">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="./index.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="./blog_list.html">Blog</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="./about_me.html">about_me</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                        Dropdown link
+                        </a>
+                        <ul class="dropdown-menu">
+                        <li><a class="dropdown-item" href="#">Action</a></li>
+                        <li><a class="dropdown-item" href="#">Another action</a></li>
+                        <li><a class="dropdown-item" href="#">Something else here</a></li>
+                        </ul>
+                    </li>
+                </ul>
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Log In</a>
+                    </li>
+                </ul>
+            </div>
+            <!-- </div> -->
+        </div>      
+    </nav>        
+    <div class="container">
+        <div class="row my-3">
+            <div class="col-8">
+                <h1>About Me</h1>
+                <h2>황상일입니다.</h2>
+                <p>HDML, CSS, Django로 웹사이트를 만듭니다.</p>
+                
+                <button onclick="whatTimeIsIt()">현재시간</button>
+            
+                <a href="index.html">첫 화면으로 돌아가기</a>
+            </div>
+
+            <div class="col-4">
+                <h2>상시숭배</h2>
+                <img src="https://i.namu.wiki/i/0Byce3dz7kLg_B6g26YNzwopaeKnoRuG7Mk2hW1y17YJQ_x8tnYG57HvEzjhAAVwyeKsyAJSbAkmKNw0l1jFytizAp_DolUkGxjg-DiK164jrcj-V2flvcRTl1p28KwulxqNXJR1SFmIGmyhdpB2Uw.webp" 
+                height="300" class="img-fluid w-100">
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-12">
+                <h2>Portfolio</h2>
+            </div>
+            <div class="col-sm-6 col-lg-6 p-3 mb-2 bg-dark text-white" style="text-align: center; font-size:125%;"><b>COL-SM</b>
+                <img src="https://wallpapercave.com/wp/wp13425310.jpg" class="img-fluid">
+            </div>
+            <div class="col-sm-3 col-lg-3 p-3 mb-2 bg-dark-subtle text-emphasis-dark" style="text-align: center; font-size:125%;"><b>COL-SM</b>
+                <img src="https://wallpapercave.com/wp/wp13428282.jpg" class="img-fluid">
+            </div>
+            <div class="col-sm-3 col-lg-3 p-3 mb-2 bg-body-secondary" style="text-align: center; font-size:125%;"><b>COL-SM</b>
+                <img src="https://wallpapercave.com/wp/wp13427402.jpg" class="img-fluid">
+            </div>
+        </div>
+    </div>
+
+<!--     <nav style="background-color: darkgreen; font-size: 150%; text-align: center;">
+    style 속성을 추가하여 배경색, 글자크기, 텍스트 정렬 등을 수정
+        <a href="./index.html" >Home</a>
+        <a href="./blog_list.html" >Blog</a>
+        <a href="./about_me.html" >About me</a>
+    </nav> -->
+
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js" integrity="sha384-BBtl+eGJRgqQAUMxJ7pMwbEyER4l1g+O15P+16Ep7Q9Q+zqX6gSbd85u4mG4QzX+" crossorigin="anonymous"></script>
+</body>
+</html>

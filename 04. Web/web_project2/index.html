@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head> <!-- 문서에 대한 기본적인 정보가 담기는 태그 -->
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>황상일의 홈페이지</title> <!-- 브라우저 위(탭)에 나타나는 제목 -->
+        <link href="./bootstrap/css/bootstrap.min.css" rel="stylesheet" type="text/css"> <!-- 스타일 css파일 링크를 호출하는 기능 -->
+        <script type="text/javascript" src="add_two_numbers.js"></script>
+        <script type="text/javascript" src="what_time_is_it.js"></script>
+
+<!--         <script type = "text/javascript">
+            function doSomething() {
+                let a = document.getElementById('inputA').value;
+                let b = document.getElementById('inputB').value;
+                document.getElementById("valueA").innerHTML = a;
+                document.getElementById("valueB").innerHTML = b;
+                document.getElementById("valueC").innerHTML = Number(a) + Number(b);
+            }
+
+            function whatTimeIsIt() {
+                alert(new Date());
+            } -->
+        </script>
+    </head>
+    <body> <!-- body : 화면에 나타나는 내용을 담음 -->
+        <nav class="navbar navbar-expand-lg bg-body-tertiary">
+            <div class="container">
+<!--                 <div class="container-fluid">
+ -->                <a class="navbar-brand" href="./index.html">Django</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNavDropdown">
+                    <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="./index.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="./blog_list.html">Blog</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="./about_me.html">about_me</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                        Dropdown link
+                        </a>
+                        <ul class="dropdown-menu">
+                        <li><a class="dropdown-item" href="#">Action</a></li>
+                        <li><a class="dropdown-item" href="#">Another action</a></li>
+                        <li><a class="dropdown-item" href="#">Something else here</a></li>
+                        </ul>
+                    </li>
+                    </ul>
+                </div>
+                <!-- </div> -->
+            </div>      
+        </nav>        
+
+        <h1>h1 : 첫 번째 크기 헤드라인</h1>
+        <h2>h2 : 두 번째 크기 헤드라인</h2>
+        <h3>h3 : 세 번째 크기 헤드라인</h3>
+        <h4>h4 : 네 번째 크기 헤드라인</h4>
+        <h5>h5 : 다섯 번째 크기 헤드라인</h5>
+
+        <button onclick="whatTimeIsIt()">현재시간</button>
+
+        <hr/>
+
+        <label for="inputA">a</label>
+        <input id="inputA" value=0 onkeyup="doSomething()">
+        <label for="inputB">b</label>
+        <input id="inputB" value=0 onkeyup="doSomething()">
+
+        <p>
+            <span id="valueA">0</span>
+            +
+            <span id="valueB">0</span>
+            =
+            <span id="valueC">0</span>
+            입니다.
+        </p>
+
+        <p>p: 문단은 p로 쓰기. Paragraph의 앞 글자를 따온 것</p>
+        <a href="https://google.com">Go to Google</a>
+        <hr/> <!-- hr : 수평선을 그어주는 태그 -->
+        <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js" integrity="sha384-BBtl+eGJRgqQAUMxJ7pMwbEyER4l1g+O15P+16Ep7Q9Q+zqX6gSbd85u4mG4QzX+" crossorigin="anonymous"></script>
+        <img src="https://m.media-amazon.com/images/S/pv-target-images/5099b0bb5c1a20bc2f43fe3a4934c94412c842a595deb5220d70a7ee959aae29.jpg" width="300">
+    </body>
+</html>
+
