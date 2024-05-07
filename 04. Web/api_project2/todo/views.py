@@ -70,3 +70,37 @@ class TodoGenerics(generics.RetrieveUpdateAPIView):
     queryset = Todo.objects.all()
     serializer_class = TodoSerializer
     lookup_field = "id"
+
+
+# 풀이 버전
+# 수정 기능
+class TodoAPIView(APIView):
+    def get(self, request, id):
+        todo = get_object_or_404(Todo, id = id)
+        serializer = TodoSerializer(todo)
+        return Response(serializer.data, status = status.HTTP_200_OK)
+    
+    def put(self, request, id):
+        todo = get_object_or_404(Todo, id = id)
+        serializer = TodoCreateSerializer(todo, data = request.data)
+        if serializer.is_valid():
+            serializer.save()
+            return Response(serializer.data, status = status.HTTP_200_OK)
+        return Response(serializer.errors, status = status.HTTP_400_BAD_REQUEST)
+    
+class DoneTodosAPIView(APIView):
+    def get(self, request):
+        dones = Todo.objects.filter(completed = True)
+        serializer = TodoSimpleSerializer(dones, many = True)
+        return Response(serializer.data, status = status.HTTP_200_OK)
+    
+class DoneTodoAPIView(APIView):
+    def get(self, request, id):
+        done = get_object_or_404(Todo, id = id)
+        done.completed = True
+        done.save()
+        serializer = TodoSerializer(done)
+        return Response(status = status.HTTP_200_OK)
+    
+
+

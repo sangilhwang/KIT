@@ -16,14 +16,15 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
-from todo.views import todoAPI, TodoAPI, TodoGenerics, TodoMixin, TodosMixin, tododoneAPI, TodoDone
+from todo.views import todoAPI, TodoAPI, TodoGenerics, TodoMixin, TodosMixin, tododoneAPI, TodoDone, TodoAPIView, DoneTodosAPIView, DoneTodoAPIView
 
 urlpatterns = [
     path("todoAPI/", todoAPI),
     path("", TodoAPI.as_view()),
-    path("<int:id>/", TodoGenerics.as_view()),
+    # path("<int:id>/", TodoGenerics.as_view()),
     path("mixins/<int:id>/", TodoMixin.as_view()),
     path("todos/", TodosMixin.as_view()),
-    path("done/", tododoneAPI),
-    path("done/<int:id>/", TodoDone)
+    path("done/", DoneTodosAPIView.as_view()),
+    path("done/<int:id>/", DoneTodoAPIView.as_view()),
+    path("<int:id>/", TodoAPIView.as_view()),
 ]
